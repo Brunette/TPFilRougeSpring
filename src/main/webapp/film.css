@@ -1,0 +1,97 @@
+.filmdetails{
+	display:flex;
+	justify-content:flex-start;
+}
+
+.leftbuffer{
+	width:100px;
+}
+
+.leftpane{
+	display:flex;
+	width:250px;
+}
+
+.rightpane{
+	display:flex;
+	justify-content:flex-start;
+	flex-direction:column;
+	margin-left:20px;
+}
+
+.rightinfo{
+	display:flex;
+	justify-content:flex-start;
+	width:55%;
+}
+
+.rightdetails{
+	display:flex;
+	justify-content:flex-end;
+	width:55%;
+}
+
+.genretiles{
+	display:flex;
+	justify-content:flex-start;
+	flex-wrap: wrap;
+	width:75%;
+}
+
+.filminfo
+{
+	font-size: 1.1em;
+    margin-left:20px;
+}
+
+.genretile{	 
+	display:inline;
+	 margin:5px;
+	 padding-left:10px;
+	 padding-right:10px;
+	 padding-top:5px;
+	 padding-bottom:5px;
+	 background-color:grey;
+	 color:white;
+	 border-radius:25px; 
+}
+
+.hidden {
+  position: absolute;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.seancelist{
+	display:flex;
+	justify-content: flex-start;
+	align-items: center;
+	height:200px;
+	
+}
+
+input[type=checkbox]+label {
+	background-color:black;
+  	color: #ccc;
+  	margin:5px;
+  	padding:10px;
+  	border-radius:25px;
+}
+
+input[type=checkbox]:checked+label {
+	background-color:white;
+  	color: #f00;
+}
+
+input[type=radio]+label {
+	background-color:gray;
+  	color: #000;
+  	margin:0px;
+  	border:1px solid black;
+  	padding:10px;
+}
+
+input[type=radio]:checked+label {
+	background-color:yellow;
+  	color: #000;
+}
