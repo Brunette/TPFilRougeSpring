@@ -18,6 +18,7 @@ public class GenreBLL {
 
 	public List<Genre> selectUsed() {
 		// TODO: find only Genre with film associaces
-		return dao.findAll();
+		return dao.findUsed();
+		// return dao.findAll();
 	}
 }
