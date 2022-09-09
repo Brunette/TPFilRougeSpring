@@ -11,8 +11,6 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
-import javax.persistence.NamedQueries;
-import javax.persistence.NamedQuery;
 import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
@@ -20,10 +18,6 @@ import javax.persistence.Transient;
 
 @Entity
 @Table(name = "cinemas")
-@NamedQueries({ @NamedQuery(name = "trouverTousCinemas", query = "SELECT c FROM Cinema c"),
-		@NamedQuery(name = "trouverCinemaById", query = "SELECT c FROM Cinema c WHERE c.id = :id"),
-		@NamedQuery(name = "supprimerCinemaById", query = "DELETE from Cinema WHERE id = :id"),
-		@NamedQuery(name = "trouverCinemaByCritere", query = "SELECT c FROM Cinema c WHERE c.address.ville LIKE :val OR c.address.address1 LIKE :val OR c.address.codePostal LIKE :val ") })
 public class Cinema {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)

@@ -9,18 +9,12 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
-import javax.persistence.NamedQueries;
-import javax.persistence.NamedQuery;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 import javax.persistence.Transient;
 
 @Entity
 @Table(name = "modifications")
-@NamedQueries({
-		@NamedQuery(name = "trouverModifByCinema", query = "SELECT m FROM Modification m LEFT JOIN m.salle as s LEFT JOIN s.cinema as c where c.id = :cinemaid"),
-		@NamedQuery(name = "trouverModificationById", query = "SELECT m FROM Modification m WHERE m.id = :id"),
-		@NamedQuery(name = "supprimerModificationById", query = "DELETE from Modification WHERE id = :id") })
 public class Modification {
 
 	public enum Type {

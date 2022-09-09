@@ -36,8 +36,9 @@ public class SeanceBLL {
 		return dao.findByCinemaAndFilmAndDay(cinema, film, date);
 	}
 
-	public List<Seance> selectByCinemaFilm(int cinemaid, Film film) {
-		return dao.findByCinemaIdAndFilm(cinemaid, film);
+	public List<Seance> selectByCinemaFilm(Cinema cinema, Film film) {
+		return dao.findByCinemaAndFilm(cinema, film);
+
 	}
 
 	public void insert(Seance seance) {
@@ -58,9 +59,5 @@ public class SeanceBLL {
 
 	public Seance selectById(int intValue) {
 		return dao.findById(intValue).get();
-	}
-
-	public List<Seance> selectByCinemaFilm(Cinema cinema, Film film) {
-		return dao.findByCinemaFilm(cinema, film);
 	}
 }

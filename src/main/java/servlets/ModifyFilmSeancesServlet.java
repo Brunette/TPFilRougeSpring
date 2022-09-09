@@ -68,7 +68,7 @@ public class ModifyFilmSeancesServlet extends HttpServlet {
 				if (film != null) {
 					List<Seance> seances;
 					request.setAttribute("film", film);
-					seances = bllSeance.selectByCinemaFilm(cinemaid, film);
+					seances = bllSeance.selectByCinemaFilm(cinema, film);
 					request.setAttribute("seances", seances);
 					request.setAttribute("cinema", cinema);
 					request.getRequestDispatcher("/WEB-INF/modfilm.jsp").forward(request, response);

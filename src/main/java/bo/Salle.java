@@ -9,16 +9,10 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
-import javax.persistence.NamedQueries;
-import javax.persistence.NamedQuery;
 import javax.persistence.Table;
 
 @Entity
 @Table(name = "salles")
-@NamedQueries({ @NamedQuery(name = "trouverTousSalles", query = "SELECT s FROM Salle s"),
-		@NamedQuery(name = "trouverSalleById", query = "SELECT s FROM Salle s WHERE s.id = :id"),
-		@NamedQuery(name = "trouverSallesByCinema", query = "SELECT s FROM Salle s WHERE s.cinema.id = :cinemaid"),
-		@NamedQuery(name = "supprimerSalleById", query = "DELETE from Salle WHERE id = :id") })
 public class Salle {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
