@@ -9,5 +9,5 @@ import bo.User;
 public interface UserDAO extends JpaRepository<User, Integer> {
 	User findByUsername(String name);
 
-	User findBySuperuserCinemaSallesIdIn(int salleid);
+	// User findBySuperuserCinemaSallesIdIn(int salleid);
 }

@@ -1,0 +1,32 @@
+<div class="form-popup" id="myForm">
+	<div class="form-popup-cont">
+		<form action="signin" method="post" class="form-container">
+			<h1>Login</h1>
+
+			<label for="id_login_name"><b>Username</b></label> <input type="text"
+				placeholder="Enter Username" id="id_login_name" name="username"
+				required> <label for="psw"><b>Password</b></label> <input
+				type="password" placeholder="Enter Password" name="pwd" required>
+			<input name="redirect" type="hidden"
+				value="${requestScope['javax.servlet.forward.request_uri']}?${requestScope['javax.servlet.forward.query_string']}" />
+			<button type="submit" class="btn">Login</button>
+			<button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+
+		</form>
+		<form action="signup" method="post" class="form-container">
+			<h1>Signup</h1>
+
+			<label for="id_signup_email"><b>Email</b></label> <input type="email"
+				placeholder="Enter Email" id="id_signup_email" name="email" required />
+			<label for="id_signup_name"><b>Username</b></label> <input
+				type="text" placeholder="Enter Username" id="id_signup_name"
+				name="username" required /> <label for="psw"><b>Password</b></label>
+			<input type="password" placeholder="Enter Password" name="pwd"
+				required> <input name="redirect" type="hidden"
+				value="${requestScope['javax.servlet.forward.request_uri']}?${requestScope['javax.servlet.forward.query_string']}" />
+			<button type="submit" class="btn">Signup</button>
+			<button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+
+		</form>
+	</div>
+</div>

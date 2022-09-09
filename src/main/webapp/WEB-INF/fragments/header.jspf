@@ -1,0 +1,21 @@
+<div class="myheader">
+	<a href="acceuil" class="headertitle">Rillethes</a> <a href="acceuil"
+		class="headerlink">Cinemas</a> <a href="films" class="headerlink">Films</a>
+	<div class="header-prof">
+		<c:if test="${empty sessionScope.signedin}">
+			<a onclick="openForm()" class="headerlink">Sign in</a>
+		</c:if>
+		<c:if test="${!empty sessionScope.signedin}">
+			<c:if test="${!empty sessionScope.superuser}">
+				<c:if test="${sessionScope.superuser.admin}">
+					<a href="admin"><span class="headerlink">Admin Space</span></a>
+				</c:if>
+				<c:if test="${!sessionScope.superuser.admin}">
+					<a href="gerant"><span class="headerlink">Gerant Space</span></a>
+				</c:if>
+			</c:if>
+			<a href="profile"><span class="headerlink">Profile</span></a>
+			<a href="signout"><span class="headerlink">Sign out</span></a>
+		</c:if>
+	</div>
+</div>

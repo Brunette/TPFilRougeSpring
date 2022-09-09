@@ -1,0 +1,11 @@
+ <!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Rillethes</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="film.css">
+<script type="text/javascript" src="script.js"></script>
+</head>
+<body id="#top">
+<%@ include file="header.jspf" %>

@@ -59,4 +59,8 @@ public class SeanceBLL {
 	public Seance selectById(int intValue) {
 		return dao.findById(intValue).get();
 	}
+
+	public List<Seance> selectByCinemaFilm(Cinema cinema, Film film) {
+		return dao.findByCinemaFilm(cinema, film);
+	}
 }

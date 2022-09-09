@@ -9,5 +9,6 @@ import bo.Cinema;
 
 @Repository
 public interface CinemaDAO extends JpaRepository<Cinema, Integer> {
-	List<Cinema> findByAddressVilleLikeOrAddressAddress1LikeOrAddressCodePostalLike(String filter);
+	List<Cinema> findByAddressVilleStartsWithOrAddressAddress1StartsWithOrAddressCodePostalStartsWith(String filter1,
+			String filter2, String filter3);
 }

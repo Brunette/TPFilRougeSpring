@@ -37,7 +37,11 @@ public class CinemaBLL {
 	}
 
 	public List<Cinema> selectByCritere(String filter) {
-		return dao.findByAddressVilleLikeOrAddressAddress1LikeOrAddressCodePostalLike(filter);
+		if (!filter.isBlank())
+			return dao.findByAddressVilleStartsWithOrAddressAddress1StartsWithOrAddressCodePostalStartsWith(filter,
+					filter, filter);
+		else
+			return dao.findAll();
 	}
 
 }

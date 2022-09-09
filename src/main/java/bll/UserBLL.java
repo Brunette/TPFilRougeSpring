@@ -29,7 +29,8 @@ public class UserBLL {
 	}
 
 	public User selectBySalleID(int salleid) {
-		return dao.findBySuperuserCinemaSallesIdIn(salleid);
+		// return dao.findBySuperuserCinemaSallesIdIn(salleid);
+		return null;
 	}
 
 	public void insert(User user) {

@@ -18,9 +18,6 @@ import bll.SeanceBLL;
 import bo.Cinema;
 import bo.Film;
 
-/**
- * Servlet implementation class FilmServlet
- */
 @WebServlet("/film")
 public class FilmServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
@@ -39,10 +36,6 @@ public class FilmServlet extends HttpServlet {
 		SpringBeanAutowiringSupport.processInjectionBasedOnCurrentContext(this);
 	}
 
-	/**
-	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse
-	 *      response)
-	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		Film film = null;
@@ -68,7 +61,10 @@ public class FilmServlet extends HttpServlet {
 				date = LocalDate.now();
 			}
 			cinema.setSeances(bllSeance.selectByCinemaFilmDay(cinema, film, date));
-			System.out.println("Seance count " + cinema.getSeances().size());
+			// cinema.setSeances(bllSeance.selectByCinema(cinema));
+			if (cinema.getSeances() != null) {
+				System.out.println("Seance count " + cinema.getSeances().size());
+			}
 			request.setAttribute("cinema", cinema);
 			request.setAttribute("date", date.toString());
 		}
@@ -76,10 +72,6 @@ public class FilmServlet extends HttpServlet {
 		request.getRequestDispatcher("/WEB-INF/film.jsp").forward(request, response);
 	}
 
-	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse
-	 *      response)
-	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		// TODO Auto-generated method stub

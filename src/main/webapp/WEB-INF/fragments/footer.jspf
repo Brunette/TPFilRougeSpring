@@ -1,0 +1,4 @@
+<div class="myfooter">
+	<a href="#top">Back to top</a>
+	<%@ include file="login.jspf" %>	
+</div>

@@ -42,7 +42,6 @@ public class FilmBLL {
 	}
 
 	public List<Film> selectByCinema(Cinema cinema) {
-		// return dao.selectByCinema(cinema);
-		return null;
+		return dao.findByCinemaId(cinema.getId());
 	}
 }
